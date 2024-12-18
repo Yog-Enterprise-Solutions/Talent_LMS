@@ -137,24 +137,26 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Participants": {
+		"validate": "talent_lms.talent_lms.talent_lms_intergration.login_credential"
+		
+	},
+	"Branch": {
+		"on_update": "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"
+		
+	}
+	
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"talent_lms.tasks.all"
 # 	],
-# 	"daily": [
-# 		"talent_lms.tasks.daily"
-# 	],
+	"daily": [ "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"]
 # 	"hourly": [
 # 		"talent_lms.tasks.hourly"
 # 	],
@@ -164,7 +166,7 @@ app_license = "mit"
 # 	"monthly": [
 # 		"talent_lms.tasks.monthly"
 # 	],
-# }
+ }
 
 # Testing
 # -------
