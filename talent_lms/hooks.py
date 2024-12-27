@@ -138,7 +138,7 @@ app_license = "mit"
 # Hook on document methods and events
 
 doc_events = {
-	"Participants": {
+	"Participant": {
 		"validate": "talent_lms.talent_lms.talent_lms_intergration.login_credential"
 		
 	},
