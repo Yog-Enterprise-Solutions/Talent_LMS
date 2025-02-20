@@ -139,7 +139,8 @@ app_license = "mit"
 
 doc_events = {
 	"Participant": {
-		"validate": "talent_lms.talent_lms.talent_lms_intergration.login_credential"
+		"validate": "talent_lms.talent_lms.talent_lms_intergration.login_credential",
+       
 		
 	},
 	"Branch": {
