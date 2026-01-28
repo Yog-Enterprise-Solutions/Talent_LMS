@@ -8,6 +8,41 @@ app_license = "mit"
 # Apps
 # ------------------
 
+# doc_events = {
+# 	"Participant": {
+# 		"validate": "talent_lms.talent_lms.talent_lms_intergration.login_credential",
+       
+		
+# 	},
+# 	"Branch": {
+# 		"on_update": "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"
+		
+# 	}
+	
+# }
+
+# Scheduled Tasks
+# ---------------
+
+# scheduler_events = {
+# # 	"all": [
+# # 		"talent_lms.tasks.all"
+# # 	],
+# 	"daily": [ "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"]
+# # 	"hourly": [
+# # 		"talent_lms.tasks.hourly"
+# # 	],
+# # 	"weekly": [
+# # 		"talent_lms.tasks.weekly"
+# # 	],
+# # 	"monthly": [
+# # 		"talent_lms.tasks.monthly"
+# # 	],
+#  }
+
+
+
+
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
@@ -137,37 +172,6 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-	"Participant": {
-		"validate": "talent_lms.talent_lms.talent_lms_intergration.login_credential",
-       
-		
-	},
-	"Branch": {
-		"on_update": "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"
-		
-	}
-	
-}
-
-# Scheduled Tasks
-# ---------------
-
-scheduler_events = {
-# 	"all": [
-# 		"talent_lms.tasks.all"
-# 	],
-	"daily": [ "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"]
-# 	"hourly": [
-# 		"talent_lms.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"talent_lms.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"talent_lms.tasks.monthly"
-# 	],
- }
 
 # Testing
 # -------
