@@ -8,29 +8,10 @@ import re
 import random
 from frappe.utils import random_string
 
-
-
-
-
 def generate_random_password(length=12):
 	"""Generate a random password."""
 	characters = string.ascii_letters + string.digits + string.punctuation
 	return ''.join(random.choice(characters) for _ in range(length))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def login_credential_scheduler():
 	API_KEY = 'RaNanZK6GnxVWpfi1bK5A8PryzXKpU'
@@ -85,13 +66,6 @@ def login_credential_scheduler():
 			frappe.log_error(f"Request error for email {email}", "TalentLMS API Error")
 		except Exception as e:
 			frappe.log_error(f"Unexpected error for participant {participant['name']}: ", "TalentLMS Scheduler")
-
-
-
-
-
-
-
 
 def login_credential(doc, method=None):
 	"""
