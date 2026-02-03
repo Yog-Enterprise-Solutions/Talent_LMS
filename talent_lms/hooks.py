@@ -8,18 +8,16 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# doc_events = {
-# 	"Participant": {
-# 		"validate": "talent_lms.talent_lms.talent_lms_intergration.login_credential",
-       
+doc_events = {
+	"Participant": {
+		"validate": "talent_lms.talent_lms.talent_lms_intergration.login_credential",	
+	},
+	# "Branch": {
+	# 	"on_update": "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"
 		
-# 	},
-# 	"Branch": {
-# 		"on_update": "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"
-		
-# 	}
+	# }
 	
-# }
+}
 
 # Scheduled Tasks
 # ---------------
