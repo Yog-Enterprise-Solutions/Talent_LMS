@@ -72,10 +72,18 @@ def login_credential(doc, method=None):
 	Function to check if a user exists in TalentLMS and update document data.
 	"""
 	# Constants
-    
-	API_KEY = 'RaNanZK6GnxVWpfi1bK5A8PryzXKpU'
-	DOMAIN = 'apprendiseu.talentlms.com'
 
+	# API_KEY = 'RaNanZK6GnxVWpfi1bK5A8PryzXKpU'
+	# DOMAIN = 'apprendiseu.talentlms.com'
+	CONF = frappe.get_doc("Talent LMS Settings")
+	API_KEY = frappe.utils.password.get_decrypted_password("Talent LMS Settings", CONF.name, "api_key")
+	DOMAIN = CONF.domain
+	if not API_KEY:
+		frappe.log_error(f"API KEY not found for document {doc.name}", 'Talent LMS Settings')
+		return {"status": "error", "message": "API KEY not found"}
+	if not DOMAIN:
+		frappe.log_error(f"DOMAIN not found for document {doc.name}", 'Talent LMS Settings')
+		return {"status": "error", "message": "DOMAIN not found"}
 	if not doc.email:
 		frappe.log_error(f"No email found for document {doc.name}", 'TalentLMS User Check')
 		return {"status": "error", "message": "No email provided"}
