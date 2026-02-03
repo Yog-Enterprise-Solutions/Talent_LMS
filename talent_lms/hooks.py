@@ -14,7 +14,6 @@ doc_events = {
 	},
 	# "Branch": {
 	# 	"on_update": "talent_lms.talent_lms.talent_lms_intergration.login_credential_scheduler"
-		
 	# }
 	
 }
